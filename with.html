@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/with.css">
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.menu').click(function () {
+                $('.menubox').slideToggle(400)
+
+
+            })
+
+
+
+            $('.sec1 .right .item1').click(function () {
+                $('.bg1').css('display', 'block')
+                $('.text_bg .back').css('display', 'none')
+                $('.text_bg .bg01').css('display', 'block')
+                $('.left .text h2').css('display', 'none')
+            })
+
+            $('.bg1').click(function () {
+                $('.bg1').css('display', 'none')
+                $('.text_bg .back').css('display', 'none')
+                $('.left .text h2').css('display', 'block')
+            })
+            //-------------------------------------------------------------------
+            $('.sec1 .right .item2').click(function () {
+                $('.bg2').css('display', 'block')
+                $('.text_bg .back').css('display', 'none')
+                $('.text_bg .bg02').css('display', 'block')
+                $('.left .text h2').css('display', 'none')
+            })
+            $('.bg2').click(function () {
+                $('.bg2').css('display', 'none')
+                $('.text_bg .back').css('display', 'none')
+                $('.left .text h2').css('display', 'block')
+            })
+            //---------------------------------------------------------------------
+
+
+            $('.sec1 .right .item3').click(function () {
+                $('.bg3').css('display', 'block')
+                $('.text_bg .back').css('display', 'none')
+                $('.text_bg .bg03').css('display', 'block')
+                $('.left .text h2').css('display', 'none')
+            })
+            $('.bg3').click(function () {
+                $('.bg3').css('display', 'none')
+                $('.text_bg .back').css('display', 'none')
+                $('.left .text h2').css('display', 'block')
+            })
+
+            //---------------------------------------------------------------------
+            $('.sec1 .right .item4').click(function () {
+                $('.bg4').css('display', 'block')
+                $('.text_bg .back').css('display', 'none')
+                $('.text_bg .bg04').css('display', 'block')
+                $('.left .text h2').css('display', 'none')
+            })
+            $('.bg4').click(function () {
+                $('.bg4').css('display', 'none')
+                $('.text_bg .back').css('display', 'none')
+                $('.left .text h2').css('display', 'block')
+            })
+
+            //$('.sec1 .title h1').slideDown(400)
+
+
+
+            var swiper = new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            var openBtn = $('#btn'),
+                slideMenu = $('#menu'), // ↑ '#btn'にオープン・クローズボタンID、'#menu'にメニュー要素IDを指定
+                layer = $('<div />').addClass('layer');
+            openBtn.on("click", function () {
+                if (slideMenu.is(':hidden')) {
+                    layer.appendTo('body');
+                    slideMenu.slideDown(300); // ↑かっこ内の数字でアニメーションスピード設定（ミリ秒単位）
+                } else {
+                    slideMenu.slideUp(300); // ↑かっこ内の数字でアニメーションスピード設定（ミリ秒単位）
+                    layer.remove();
+                }
+            });
+
+            var swiper = new Swiper(".mySwiper_03", {
+                direction: 'vertical',
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+
+        })
+            //---------------------------------------------------------------------
+            // $('.sec1 .right .item1').mouseleave(function () {
+            //     $('.bg1').css('display','none')
+            //})
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- <div class="menubox">
+            <div class="inner">
+                <ul>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu1</a></li>
+                    
+                </ul>
+            </div>
+        </div> -->
+
+        <div class="menubox">
+
+            <!--↓メニュー-->
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">굿즈샵</a></li>
+                    <li><a href="#">굿즈제작</a></li>
+                    <li><a href="#">단체주문</a></li>
+                    <li><a href="#">굿즈컨설팅</a></li>
+                    <li><a href="#">리뷰</a></li>
+                </ul>
+            </nav>
+
+            <!--↓クリックボタン-->
+            <div id="btn"><span></span></div>
+        </div>
+        <header>
+            <!--  <button><img class="menuicon" src="img/icons8-메뉴-24.png" alt=""></button> -->
+            <div class="inner">
+                <a href="#"><img class="logo" src="img/logo.png" alt="로고"></a>
+                <ul class="login">
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">장바구니</a></li>
+                    <!-- <li><a href="#">menu</a></li> -->
+                </ul>
+            </div><!-- inner end -->
+
+            <nav>
+                <div class="inner">
+
+                    <!-- <strong>제작 일정 지연 안내 공지</strong> -->
+                    <div class="swiper mySwiper_03">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="#">제작 일정 지연 안내 공지</a></div>
+                            <div class="swiper-slide"><a href="#">500개 이상 주문 시 제작 기간은 문의해주세요.</a></div>
+                            <div class="swiper-slide"><a href="#">[가이드] 굿즈 제작시 베이스굿즈별 이미지 사이즈 안내</a></div>
+                            <div class="swiper-slide"><a href="#">위드굿즈의 특별한 회원혜택</a></div>
+                            <div class="swiper-slide"><a href="#">[이벤트] 카카오톡 플러스친구 추가 시 5% 할인쿠폰</a></div>
+                            <div class="swiper-slide"><a href="#">저작권 및 창작자 약관 개정고지(2021/01/18 시행)</a></div>
+                            <div class="swiper-slide"><a href="#">[공지] 커스텀 서비스 안내</a></div>
+                            <div class="swiper-slide"><a href="#">[가이드] 위드굿즈 교환가능기준 안내</a></div>
+                            <div class="swiper-slide"><a href="#">모멘트텀블러M 일시 품절안내</a></div>
+                            <div class="swiper-slide"><a href="#">[공지] 커스텀 서비스 안내</a></div>
+                        </div>
+                    </div>
+
+
+                    <div class="search">
+                        <input type="text" placeholder="나만의 굿즈를 찾아보세요">
+                        <button><img src="img/icons8--unscreen.gif" alt=""></button>
+                    </div>
+                </div><!-- inner end -->
+            </nav>
+        </header>
+
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper main_visual">
+                <div class="swiper-slide"><a href="#"><img src="img/더스티핑크.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="img/Untitled-3.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="img/main2.jpg" alt=""></a></div>
+                <!--   <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div> -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div><!-- main_visual end -->
+
+        <!-- <div class="main_visual">
+            <div><img src="img/main1.jpg" alt=""></div>
+        </div> -->
+
+        <section class="sec1">
+            <div class="inner">
+                <div class="title">
+                    <h1>테마별, 인기상품</h1>
+                    <p><a href="#">자세히보기</a></p>
+                </div>
+                <div class="list">
+                    <div class="left">
+                        <img src="img/mike-kotsch-HNx4QLRgy2k-unsplash.jpg" alt="">
+                        <div class="text">
+                            <h2>마음을 적시는<br>빗소리</h2>
+
+                        </div><!-- text end -->
+                    </div><!-- left end -->
+
+                    <div class="right">
+                        <div class="item item1">
+                            <img src="img/item1.png" alt="">
+                        </div><!-- item end -->
+                        <div class="item item2">
+                            <img src="img/item2.png" alt="">
+                        </div><!-- item end -->
+                        <div class="item item3">
+                            <img src="img/item3.png" alt="">
+                        </div><!-- item end -->
+                        <div class="item item4">
+                            <img src="img/item4.png" alt="">
+                        </div><!-- item end -->
+                    </div><!-- right end -->
+                </div><!-- list end -->
+            </div><!-- inner end -->
+
+            <div class="bg">
+                <div class="bg1 back">
+                    <span>배경1</span>
+                </div>
+                <div class="bg2 back">
+                    <span>배경1</span>
+                </div>
+                <div class="bg3 back">
+                    <span>배경1</span>
+                </div>
+                <div class="bg4 back">
+                    <span>배경1</span>
+                </div>
+            </div>
+
+
+            <div class="text_bg">
+                <div class="bg01 back">
+
+                    <div class="text">
+                        <div class="top">
+                            <h2>Rainy Day</h2>
+                            <p>하이볼 유리컵
+                                <span>데일리 컬렉션</span>
+                            </p>
+                            <p>15,000원</p>
+                        </div>
+                        <div class="bottom">
+                            <strong>Ownground창작자님의 설명</strong>
+                            <p>비 오는 날 우산 없으면 조금 올 때는 뛰어갈 수 있지만, <br>너무 많이 오면 가까운 편의점에서 우산을 사야되겠죠.<br>그럴 땐 누군가 와서 우산을
+                                쥐어주면 좋겠다는
+                                생각이 들지 않나요? 비가 와 춥다가도 따뜻해지는 마음을 주는 일러스트 입니다. 여러분에게도 그림 속 리트리버같은 누군가가 있나요? <br>아니면 여러분이
+                                우산이
+                                필요한 고양이에게 리트리버가 <br>되어줄 수있어요</p>
+                        </div>
+                    </div><!-- text end -->
+                </div>
+                <div class="bg02 back">
+                    <div class="text">
+                        <div class="top">
+                            <h2>비오는날, 도와줄게</h2>
+                            <p>우드 코스터 원형 <span>
+                                    우드블럭</span></p>
+                            <p>12,000원</p>
+                        </div>
+                        <div class="bottom">
+                            <strong>그래곰창작자님의 설명</strong>
+                            <p>비오는날,<br> 거센 비에 힘겨워하는 꽃에 우산을 씌워주는 그래곰<br> 그래곰이 항상 당신에게 힘이 되어줄게요</p>
+                        </div><!-- bg02 back end -->
+                    </div><!-- text end -->
+                </div>
+                <div class="bg03 back">
+                    <div class="text">
+                        <div class="top">
+                            <h2>추억편_ 소나기</h2>
+                            <p>베이직 쿠션
+                                <span>쿠션</span>
+                            </p>
+                            <p>20,000원</p>
+                        </div>
+                        <div class="bottom">
+                            <strong>kosunggyu창작자님의 설명</strong>
+                            <p>청춘, 소나기를 피해 함께 달리던 순간의 추억속으로...</p>
+                        </div><!-- bg02 back end -->
+                    </div><!-- text end -->
+                </div>
+                <div class="bg04 back">
+                    <div class="text">
+                        <div class="top">
+                            <h2>내이름은 곽만춘</h2>
+                            <p>치얼스 비어캔 글라스<span>
+                                    데일리 컬렉션</span></p>
+                            <p>17,500원</p>
+                        </div>
+                        <div class="bottom">
+                            <strong>즈윤윤창작자님의 설명</strong>
+                            <p>고양이 곽만춘씨는 성은 곽이요, 찰 만(滿), 봄 춘(春)자로<br> 가득하게 차오른 봄이라는 이름을 가지고 있습니다.<br> 비가 오는 날엔 주황 장화를 신고
+                                사색을 즐기며 하루를 보낸답니다.</p>
+                        </div><!-- bg02 back end -->
+                    </div><!-- text end -->
+                </div>
+            </div>
+        </section><!-- sec1 end -->
+
+        <!--   <section class="sec4">
+            <div class="inner">
+
+            </div> inner end -->
+        </section><!-- sec4 end -->
+
+
+        <section class="sec2">
+            <div class="inner">
+                <div class="title">
+                    <h2>생생한 리뷰</h2>
+                    <p><a href="#">전체보기</a></p>
+                </div><!-- title end -->
+                <div class="list">
+                    <div class="item"><a href="#">
+                            <figure>
+                                <img src="img/re1.jpeg" alt="">
+                            </figure>
+                            <div class="text">
+                                <h3>실물이 훨씬 이뻐요!</h3>
+                                <p>평소에 고양이 좋아해서 주문했어요! 고양이 그림도 유니크해서 눈에 확 들어오더라구요! 디자인도 몇가지 있던데 고양이 좋아하는 지인...</p>
+                        </a></div><!-- text end -->
+                </div>
+                <div class="item"><a href="#">
+                        <figure>
+                            <img src="img/re2.png" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>아침에 우유 먹기 딱!!</h3>
+                            <p>아침에 우유먹을 때 사용하기 너무 좋아요💕</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <figure>
+                            <img src="img/re3.png" alt="">
+                        </figure>
+                        <div class="text">
+                            <h3>집에서 감성카페 느낌 물씬</h3>
+                            <p>집에서 감성카페 분위기를 느낄 수 있어서 좋았습니다. 너무 귀여워서 홈카페 좋아하시는 분들에게 강추입니다.</p>
+                        </div>
+                    </a>
+                </div><!-- item end -->
+            </div>
+    </div><!-- inner end -->
+
+    <!--  <div class="itemclick">
+        <a href="#"><img class="cancel" src="img/icons8-취소하다-50 (1).png" alt=""></a>
+        <div class="review">
+        <img class="rev" src="img/re1.jpeg" alt="">
+        <p>비 오는 날 우산 없으면 조금 올 때는 뛰어갈 수 있지만, 너무 많이 오면 가까운 편의점에서 우산을 사야되겠죠.그럴 땐 누군가 와서 우산을 쥐어주면 좋겠다는 생각이 들지 않나요? 비가 와 춥다가도 따뜻해지는 마음을 주는 일러스트 입니다. 여러분에게도 그림 속 리트리버같은 누군가가 있나요? 아니면 여러분이 우산이 필요한 고양이에게 리트리버가 되어줄 수있어요</p>
+    </div>
+    </div> -->
+    </section><!-- sec2 end -->
+
+    <section class="sec3">
+        <div class="inner">
+            <img src="img/Layer 3 copy 20.jpg" alt="">
+            <h1>오비라거 마스코트 <br><span>랄라베어</span>와 함께하는<br>힐링일상</h1>
+            <h5><a href="#">BEST ITEM</a></h5>
+            <div class="ob">
+                <div class="item"><img src="img/d15uBaaap.png" alt=""></div>
+                <div class="item"><img src="img/7XkjJashL.png" alt=""></div>
+                <div class="item"><img src="img/fPHv2sF5L.png" alt=""></div>
+            </div>
+        </div><!-- inner end -->
+    </section><!-- sec3 end -->
+
+    <footer>
+        <div class="inner">
+            <ul class="fir">
+                <li><a href="#">서비스소개</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">자주묻는질문</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">저작권대리중개업 표준업무규정</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">문의하기</a></li>
+            </ul>
+            <ul class="foot">
+                <li>대표 신윤예</li>
+                <li>주소 서울특별시 마포구 와우산로 94, 홍익대학교 제2기숙사동 1층 109호(상수동)</li>
+            </ul>
+            <ul class="foot">
+                <li>사업자등록번호 101-86-76618</li>
+
+                <li>통신판매업 신고번호
+                    2023-서울마포-2148호</li>
+                <li>은행계좌
+                    우리은행(주식회사 공공공간) 1005-202-153070</li>
+            </ul>
+            <ul class="foot">
+                <li>이메일
+                    withgoods@000gan.com</li>
+                <li>운영시간
+                    09:00 ~ 17:00(주말/공휴일 휴무)</li>
+            </ul>
+
+            <p>© 2023 000gan. ALL RIGHTS RESERVED</p>
+        </div><!-- inner end -->
+    </footer>
+    </div><!-- wrap end -->
+
+
+
+
+</body>
+
+</html>
