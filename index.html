@@ -15,11 +15,7 @@
         $(function () {
             $('.menu').click(function () {
                 $('.menubox').slideToggle(400)
-
-
             })
-
-
 
             $('.sec1 .right .item1').click(function () {
                 $('.bg1').css('display', 'block')
@@ -73,9 +69,6 @@
                 $('.left .text h2').css('display', 'block')
             })
 
-            //$('.sec1 .title h1').slideDown(400)
-
-
 
             var swiper = new Swiper(".mySwiper", {
                 spaceBetween: 30,
@@ -96,14 +89,14 @@
             });
 
             var openBtn = $('#btn'),
-                slideMenu = $('#menu'), // ↑ '#btn'にオープン・クローズボタンID、'#menu'にメニュー要素IDを指定
+                slideMenu = $('#menu'), 
                 layer = $('<div />').addClass('layer');
             openBtn.on("click", function () {
                 if (slideMenu.is(':hidden')) {
                     layer.appendTo('body');
-                    slideMenu.slideDown(300); // ↑かっこ内の数字でアニメーションスピード設定（ミリ秒単位）
+                    slideMenu.slideDown(300); 
                 } else {
-                    slideMenu.slideUp(300); // ↑かっこ内の数字でアニメーションスピード設定（ミリ秒単位）
+                    slideMenu.slideUp(300); 
                     layer.remove();
                 }
             });
@@ -117,13 +110,7 @@
                     disableOnInteraction: false,
                 },
             });
-
-        })
-            //---------------------------------------------------------------------
-            // $('.sec1 .right .item1').mouseleave(function () {
-            //     $('.bg1').css('display','none')
-            //})
-    </script>
+        })</script>
 </head>
 
 <body>
@@ -142,7 +129,6 @@
 
         <div class="menubox">
 
-            <!--↓メニュー-->
             <nav id="menu">
                 <ul>
                     <li><a href="#">굿즈샵</a></li>
@@ -153,7 +139,6 @@
                 </ul>
             </nav>
 
-            <!--↓クリックボタン-->
             <div id="btn"><span></span></div>
         </div>
         <header>
@@ -170,8 +155,6 @@
 
             <nav>
                 <div class="inner">
-
-                    <!-- <strong>제작 일정 지연 안내 공지</strong> -->
                     <div class="swiper mySwiper_03">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><a href="#">제작 일정 지연 안내 공지</a></div>
@@ -186,7 +169,6 @@
                             <div class="swiper-slide"><a href="#">[공지] 커스텀 서비스 안내</a></div>
                         </div>
                     </div>
-
 
                     <div class="search">
                         <input type="text" placeholder="나만의 굿즈를 찾아보세요">
@@ -213,10 +195,7 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
         </div><!-- main_visual end -->
-
-        <!-- <div class="main_visual">
-            <div><img src="img/main1.jpg" alt=""></div>
-        </div> -->
+        
 
         <section class="sec1">
             <div class="inner">
@@ -229,7 +208,6 @@
                         <img src="img/mike-kotsch-HNx4QLRgy2k-unsplash.jpg" alt="">
                         <div class="text">
                             <h2>마음을 적시는<br>빗소리</h2>
-
                         </div><!-- text end -->
                     </div><!-- left end -->
 
@@ -268,7 +246,6 @@
 
             <div class="text_bg">
                 <div class="bg01 back">
-
                     <div class="text">
                         <div class="top">
                             <h2>Rainy Day</h2>
@@ -334,12 +311,6 @@
             </div>
         </section><!-- sec1 end -->
 
-        <!--   <section class="sec4">
-            <div class="inner">
-
-            </div> inner end -->
-        </section><!-- sec4 end -->
-
 
         <section class="sec2">
             <div class="inner">
@@ -380,14 +351,6 @@
                 </div><!-- item end -->
             </div>
     </div><!-- inner end -->
-
-    <!--  <div class="itemclick">
-        <a href="#"><img class="cancel" src="img/icons8-취소하다-50 (1).png" alt=""></a>
-        <div class="review">
-        <img class="rev" src="img/re1.jpeg" alt="">
-        <p>비 오는 날 우산 없으면 조금 올 때는 뛰어갈 수 있지만, 너무 많이 오면 가까운 편의점에서 우산을 사야되겠죠.그럴 땐 누군가 와서 우산을 쥐어주면 좋겠다는 생각이 들지 않나요? 비가 와 춥다가도 따뜻해지는 마음을 주는 일러스트 입니다. 여러분에게도 그림 속 리트리버같은 누군가가 있나요? 아니면 여러분이 우산이 필요한 고양이에게 리트리버가 되어줄 수있어요</p>
-    </div>
-    </div> -->
     </section><!-- sec2 end -->
 
     <section class="sec3">
@@ -432,7 +395,6 @@
                 <li>운영시간
                     09:00 ~ 17:00(주말/공휴일 휴무)</li>
             </ul>
-
             <p>© 2023 000gan. ALL RIGHTS RESERVED</p>
         </div><!-- inner end -->
     </footer>
